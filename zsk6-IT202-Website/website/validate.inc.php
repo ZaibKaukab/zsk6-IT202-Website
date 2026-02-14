@@ -14,6 +14,22 @@ $_SESSION['firstName'] = 'Cristiano';
 $_SESSION['lastName'] = 'Ronaldo';
 $_SESSION['phoneNumber'] = '123-456-7890';
 
+/*
+$_SESSION['login'] = true;
+$_SESSION['emailAddress'] = 'messi@desks.com';
+$_SESSION['pronouns'] = 'He/Him';
+$_SESSION['firstName'] = 'Lionel';
+$_SESSION['lastName'] = 'Messi';
+$_SESSION['phoneNumber'] = '123-456-7891';
+
+$_SESSION['login'] = true;
+$_SESSION['emailAddress'] = 'neymar@desks.com';
+$_SESSION['pronouns'] = 'He/Him';
+$_SESSION['firstName'] = 'Neymar';
+$_SESSION['lastName'] = 'Jr';
+$_SESSION['phoneNumber'] = '123-456-7892';
+*/
+
 header("Location: main.inc.php");
 exit();
 ?>
