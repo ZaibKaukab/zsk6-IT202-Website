@@ -12,6 +12,6 @@ CREATE TABLE desk_users (
 );
 
 INSERT INTO desk_users (email_address, password, pronouns, first_name, last_name, phone_number) VALUES
-('ronaldo@desks.com', SHA2('ron@ld0password', 256), 'He/Him', 'Cristiano', 'Ronaldo', '123-456-7890'),
-('messi@desks.com', SHA2('mess1password', 256), 'He/Him', 'Lionel', 'Messi', '123-456-7891'),
-('neymar@desks.com', SHA2('neym@rpassword', 256), 'He/Him', 'Neymar', 'Jr', '123-456-7892');
+('ronaldo@desks.com', SHA2('ronaldopassword', 256), 'He/Him', 'Cristiano', 'Ronaldo', '123-456-7890'),
+('messi@desks.com', SHA2('messipassword', 256), 'He/Him', 'Lionel', 'Messi', '123-456-7891'),
+('neymar@desks.com', SHA2('neymarpassword', 256), 'He/Him', 'Neymar', 'Jr', '123-456-7892');
