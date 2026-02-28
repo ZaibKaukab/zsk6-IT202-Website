@@ -1,0 +1,22 @@
+POST http://localhost:3000/adddesktype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+deskTypeID=1
+&deskTypeCode=STND
+&deskTypeName=Standing
+&deskAisleNumber=1
+###
+GET http://localhost:3000/listdesktypes.test.php
+###
+POST http://localhost:3000/changedesktype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+deskTypeID=1
+&deskTypeCode=STD
+&deskTypeName=stand
+&deskAisleNumber=1
+###
+POST http://localhost:3000/removedesktype.test.php
+Content-Type: application/x-www-form-urlencoded
+
+deskTypeID=1

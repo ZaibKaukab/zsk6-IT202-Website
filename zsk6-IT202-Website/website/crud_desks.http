@@ -1,0 +1,32 @@
+POST http://localhost:3000/adddesk.test.php
+Content-Type: application/x-www-form-urlencoded
+
+deskID=16
+&deskCode=TEST1
+&deskName=Herman Miller
+&deskDescription=High quality desk
+&deskBrand=Herman Miller
+&deskMaterial=Wood
+&deskTypeID=1
+&deskBuyPrice=200.00
+&deskSellPrice=300.00
+###
+GET http://localhost:3000/listdesks.test.php
+###
+POST http://localhost:3000/changedesk.test.php
+Content-Type: application/x-www-form-urlencoded
+
+deskID=16
+&deskCode=TEST1
+&deskName=Herman Miller
+&deskDescription=High quality desk
+&deskBrand=Herman Miller
+&deskMaterial=Wood
+&deskTypeID=1
+&deskBuyPrice=250.00
+&deskSellPrice=350.00
+###
+POST http://localhost:3000/removedesk.test.php
+Content-Type: application/x-www-form-urlencoded
+
+deskID=16

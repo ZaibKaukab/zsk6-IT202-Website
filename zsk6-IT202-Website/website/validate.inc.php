@@ -5,33 +5,31 @@
    Phase 1: Login and Logout
    zsk6@njit.edu
 */
-session_start();
-/*
-$_SESSION['login'] = true;
-$_SESSION['emailAddress'] = 'ronaldo@desks.com';
-$_SESSION['pronouns'] = 'He/Him';
-$_SESSION['firstName'] = 'Cristiano';
-$_SESSION['lastName'] = 'Ronaldo';
-$_SESSION['phoneNumber'] = '123-456-7890';
-*/
-
-/*
-$_SESSION['login'] = true;
-$_SESSION['emailAddress'] = 'messi@desks.com';
-$_SESSION['pronouns'] = 'He/Him';
-$_SESSION['firstName'] = 'Lionel';
-$_SESSION['lastName'] = 'Messi';
-$_SESSION['phoneNumber'] = '123-456-7891';
-*/
-
-$_SESSION['login'] = true;
-$_SESSION['emailAddress'] = 'neymar@desks.com';
-$_SESSION['pronouns'] = 'He/Him';
-$_SESSION['firstName'] = 'Neymar';
-$_SESSION['lastName'] = 'Jr';
-$_SESSION['phoneNumber'] = '123-456-7892';
-
-
-header("Location: main.inc.php");
-exit();
+error_log('$_POST ' . print_r($_POST, true));
+require_once('database.php');
+$emailAddress = $_POST['email_address'];
+$password = $_POST['password'];
+$query = "SELECT first_name, last_name, pronouns, email_address, phone_number FROM desk_users " .
+    "WHERE email_address = ? AND password = SHA2(?,256)";
+$db = getDB();
+$stmt = $db->prepare($query);
+$stmt->bind_param("ss", $emailAddress, $password);
+$stmt->execute();
+$stmt->bind_result($firstName, $lastName, $pronouns, $emailAddr, $phoneNumber);
+$fetched = $stmt->fetch();
+$db->close();
+$name = "$firstName $lastName";
+if ($fetched && isset($name)) {
+    $_SESSION['login'] = $name;
+    $_SESSION['emailAddress'] = $emailAddr;
+    $_SESSION['pronouns'] = $pronouns;
+    $_SESSION['firstName'] = $firstName;
+    $_SESSION['lastName'] = $lastName;
+    $_SESSION['phoneNumber'] = $phoneNumber;
+    header("Location: index.php");
+} else {
+    echo "<h2>Sorry, login incorrect for the Desk Inventory Website</h2>\n";
+    echo "<p>The email or password you entered does not match our records.</p>\n";
+    echo "<a href=\"index.php\">Return to Login Page</a>\n";
+}
 ?>
