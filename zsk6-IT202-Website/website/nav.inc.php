@@ -1,10 +1,10 @@
 <div style="padding: 10px; background-color: #ddd;">
     <ul style="list-style-type: none; padding: 0;">
         <li style="display: inline; margin-right: 15px;"><a href="index.php">Home</a></li>
-        <li style="display: inline; margin-right: 15px;"><a href="index.php?content=list_desktypes">List Desk Types</a></li>
-        <li style="display: inline; margin-right: 15px;"><a href="index.php?content=new_desktype">Add New Desk Type</a></li>
-        <li style="display: inline; margin-right: 15px;"><a href="index.php?content=list_desks">List Desks</a></li>
-        <li style="display: inline; margin-right: 15px;"><a href="index.php?content=new_desk">Add New Desk</a></li>
+        <li style="display: inline; margin-right: 15px;"><a href="index.php?content=listdesktypes">List Desk Types</a></li>
+        <li style="display: inline; margin-right: 15px;"><a href="index.php?content=newdesktype">Add New Desk Type</a></li>
+        <li style="display: inline; margin-right: 15px;"><a href="index.php?content=listdesks">List Desks</a></li>
+        <li style="display: inline; margin-right: 15px;"><a href="index.php?content=newdesk">Add New Desk</a></li>
         <li style="display: inline; margin-right: 15px;"><a href="index.php?content=logout">Logout</a></li>
     </ul>
 
