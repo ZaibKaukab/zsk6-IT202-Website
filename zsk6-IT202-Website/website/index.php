@@ -1,8 +1,8 @@
 <?php
 /* Zaib Kaukab
-   2026-02-13
+   2026-03-13
    IT202-004
-   Phase 1: Login and Logout
+   Phase 3: HTML Website Layout
    zsk6@njit.edu
 */
 session_start();
@@ -11,6 +11,12 @@ session_start();
 <html>
 <head><title>Desk Inventory Helper</title></head>
 <body>
+    <header>
+        <?php include("header.inc.php"); ?>
+    </header>
+    <nav>
+        <?php include("nav.inc.php"); ?>
+    </nav>
     <section>
         <main>
             <?php
@@ -22,5 +28,8 @@ session_start();
             ?>
         </main>
     </section>
+    <footer>
+        <?php include("footer.inc.php"); ?>
+    </footer>
 </body>
 </html>
